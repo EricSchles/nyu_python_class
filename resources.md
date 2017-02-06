@@ -5,7 +5,8 @@ https://docs.python.org/3.5/tutorial/index.html
 Other courses you should look into:
 
 [LPTHW](https://learncodethehardway.org/python/)
-	* [Exercise 0](https://learnpythonthehardway.org/book/ex0.html)
+	
+* [Exercise 0](https://learnpythonthehardway.org/book/ex0.html)
 
 MIT resources:
 
