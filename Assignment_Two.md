@@ -1,6 +1,6 @@
 #Question 1
 
-Write a python function implementing a function that implements the correlation between two variables
+Write a python a function that implements the correlation between two variables
 
 Here's the formula for correlation: http://www.socialresearchmethods.net/kb/statcorr.php
 
