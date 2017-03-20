@@ -18,6 +18,12 @@ Second Half of the Class
 * project work
 
 
+## Grading Policy
+
+For every week late, you will lose one point from the assignment.  Assignments are graded from 0 - 10.
+
+The midterm and final are scale of 0-100 and account for more of your grade.
+
 ## Final Project: Build a website!
 
 * Blog
