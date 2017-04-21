@@ -1,4 +1,4 @@
-listing = []
+listing = [] 
 listing.append(1)
 listing.append(2)
 listing.append(3)

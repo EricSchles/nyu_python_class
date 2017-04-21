@@ -10,6 +10,7 @@ def greeting_two(name=''):
     else:
         print("Hello there")
         
-greeting("Eric")
-greeting_two("")
+#greeting("Eric")
+#greeting("")
+greeting_two()
 greeting_two("Eric")
