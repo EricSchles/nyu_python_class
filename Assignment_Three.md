@@ -1,122 +1,97 @@
-Question 1
+#Question 1
 
-Write a class that counts the number of times mergesort gets called when sorting various lengths of lists of numbers.  What can you infer about it's Big-O notation?  Is it Logarithmic, Linear, or Exponential?
+Write a python a function that implements the correlation between two variables
 
-Make use of the following implementation of mergesort in order to test this:
+Here's the formula for correlation: http://www.socialresearchmethods.net/kb/statcorr.php
 
-https://github.com/EricSchles/stanford_algo_class/blob/master/first_pass/merge_sort.py
+#Question 2
 
-Question 2
+Write a class that implements the Node of a linked list
 
-Do the same analysis as question 1, except with quicksort.
+#Question 3
 
-Use this implementation:
+Write a class that uses the previously defined Node to implement a linked list.  It should support the following methods:
 
-https://github.com/EricSchles/stanford_algo_class/blob/master/first_pass/random_quicksort.py
+1) inserting - method definition: insert(self,value), returns nothing
 
-Question 3
+2) deletion - method definition: delete(self,index_to_delete), returns nothing
 
-Do the same thing as question 1, except with bubble sort.
+3) containment - method definition: contains(self, value), returns True or False
 
-Use this implementation:
+#Question 4
 
-```
-def bubbleSort(alist):
-    for passnum in range(len(alist)-1,0,-1):
-        for i in range(passnum):
-            if alist[i]>alist[i+1]:
-                temp = alist[i]
-                alist[i] = alist[i+1]
-                alist[i+1] = temp
-```
+Given the list x = [1,2,3,4,5,6,7]
 
-Question 4
+What does x[0] return?
 
-Do the same thing as question 1, except for appending elements to a binary search tree.
+What does x[-1] return?
 
-Use this implementation:
+What does x[:3] return?
 
-https://github.com/EricSchles/BinarySearchTree/blob/master/bst_pure.py
+What does x[:] return?
 
-Question 5:
+What does x[:27] return?
 
-Given the algorithm:
+Hint: you should simply run all of these and report the output.
 
-def algo1(x):
-	if x == 1:
-		return 0
-	if x == 2:
-		return 1
-	if x == 3:
-		return 1
-	else:
-		return algo1(x-3) + algo1(x-2) * algo1(x-1)
+#Question 5
 
-What do you think the Big-O notation will be?  Write a class similar to question 1, wrapping this method.  Confirm your assumptions (or prove them wrong).  What is the actual Big-O notation for this algorithm?
+Write a python function that implements multiplication.  Hint: Using a for loop and the addition operator.
 
-Question 6:
+#Question 6
 
-import math
-def algo2(x,y):
-	if x == 1:
-		return x+y
-	else:
-		return algo2(x-algo2(1,y),y-algo2(x,1)) * math.pow(algo2(x,y), 2)
+Write a python function that implements division.  Hint: Use looping and repeated subtraction.
 
-Does algo2 always complete?  Can you think of any cases when it doesn't?  What other statement might ensure it always completes?
+#Question 7
 
-Question 7:
+Write a class that implements a triangle object.  It should have 3 tuples as data called:
 
-Finding a Cycles: 
+point_one
 
-In Linked Lists it's possible to get a cycle.  That's when an element creates a loop, so that the list points back to it's self and never finishes.  Here is an example of such a list:
+point_two
 
-```
-class Node:
-	def __init__(self,data,next=None):
-		self.data = data
-		self.next = next
-	def __str__(self):
-		return repr(self.data)
+point_three
 
-head = Node(None)
-cur = head
+Each one should be a tuple with two integers - an x value and a y value.
 
-for i in range(3):
-	cur.next = Node(i)
-	cur = cur.next
+Also you should implement the following methods:
 
-point_of_loop = Node(4)
-cur.next = point_of_loop
-cur = head
-cur = cur.next.next
-point_of_loop.next = cur
+1) Area - a method for calculating the area of the triangle: definition area(self) #returns a number
 
-cur = head
-count = 0
-while cur:
-	print(cur)
-	cur = cur.next
-	count += 1
-	if count == 1000:
-		break
-```
+2) Perimeter -  a method for calculating the perimeter of the triangle: definition perimeter(self) #returns a number
 
-Clearly the list is only 4 elements long, yet it goes on forever!  Write a method that detects loops in a linked list.  Note: the internet is your friend here.  Research the solution.  In this case, it's fine to steal someone else's code (not from the class though).  The goal is to understand how to find loops in linked lists and what to do about them.
+#Question 8
 
-Question 8:
+Write a class that implements a circle.  It should include two data points:
 
-Write a method that flattens a binary search tree.  It should store all the elements of the tree in a linked list.
+1) the center of the circle ( a tuple of two integers )
 
-Question 9:
+2) the length of a line from the center of the circle to it's edge (called it's radius)
 
-Write a method that compares if two binary search trees have the same structure (and elements).  
+You should also write methods with calculate the following:
 
-Question 10:
+1) Area
 
-Write a method that inserts the 1st 1000 integers into a binary search tree in ascending order, so the first element inserted should be 0.  Then write another method that inserts the 1st 1000 integers into a binary search tree, in descending order, so the first element inserted should be 999.  Both methods should return the resulting trees.
+2) perimeter
 
-Now write a method to inspect the structure of a binary search tree.  Compare the pictures of the two resultant trees.  Why do they look the way they look?
+#Question 9
 
+Use the linked list above to store 10000 numbers in the linked list.  
+
+Then delete a randomly chosen number (you can use random.randint to do this)
+
+Finally write a method that checks for containment.
+
+Record the running times of each of these methods - use time.time()
+
+Write methods that do the same thing with the list object that comes with python - []
+
+Which method is faster for each case?  Why?  Explain why one method runs faster or slower.
+
+#Question 10 - Extra credit
+
+Write a method that implements a general purpose way to calculate the nth fibonnaci number.
+
+Hint use recursion.
 
 
