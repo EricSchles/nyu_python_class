@@ -32,7 +32,7 @@ def median(List):
     List.sort()
     index_of_a_middle_number = len(List)//2 #integer value in python 3
     if len(List) % 2 == 0:
-        return mean([ List[index_of_a_middle_number], List[index_of_a_middle_number+1] ])
+        return mean([ List[index_of_a_middle_number-1], List[index_of_a_middle_number] ])
     else:
         return List[index_of_a_middle_number]
 
