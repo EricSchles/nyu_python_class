@@ -43,12 +43,14 @@ def median(List):
 #Solution 4:
 
 def mode(List):
-    unique_elements = set(List)
+    List.sort()
+    unique_elements = list(set(List))
+    unique_elements.sort()
     dicter = {}
     for elem in unique_elements:
         dicter[elem] = List.count(elem)
     max_elem = unique_elements[0]
-    max_count = 0
+    max_count = dicter[unique_elements[0]]
     for elem in unique_elements:
         if max_count < dicter[elem]:
             max_elem = elem
