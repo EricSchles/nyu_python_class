@@ -1,8 +1,9 @@
 import math
 import statistics as st
 
+
 class DescribeData:
-    def __init__(self,List): #stands for initialize
+    def __init__(self, List): #stands for initialize
         self.List = List
 
     def describe(self):
@@ -34,7 +35,7 @@ def describe(List):
     print("Our list has ",len(List),"many elements")
     print("The mean is ",ave) #automatic type casting to string
     print("The median is ",middle_number)
-    if ave > median:
+    if ave > middle_number:
         print("And the mean is ",abs(ave-middle_number),"greater than the median")
     
 if __name__ == '__main__':
